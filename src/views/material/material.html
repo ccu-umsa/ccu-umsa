@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CCU | Material</title>
+    <!-- To-do: Crear un archivo css aparte para estos estilos css -->
+    <style>
+        .content-card {
+            margin: 30px 100px;
+            width: 80vw;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 50px 0;
+            justify-items: center;
+            align-items: center;
+        }
+
+        .card {
+            display: flex;
+            flex-direction: column;
+            width: 300px;
+        }
+
+        .card-actions:hover {
+            cursor: pointer;
+        }
+
+        .card .card-actions {
+            border: 3px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card-actions * {
+            text-decoration: none;
+            color: black;
+        }
+
+        .card-actions:hover {
+            cursor: pointer;
+        }
+
+        .card .card-image img {
+            width: 100%;
+        }
+
+        .search {
+            display: flex;
+            justify-content: center;
+            margin: 30px;
+        }
+
+        .close-button {
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 40px;
+            height: 40px;
+        }
+
+        #dialog-video {
+            opacity: 100%;
+            display: none;
+            padding: 0;
+            align-self: center;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: grey;
+        }
+
+        .dialog-background {
+            position: fixed;
+            display: none;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: black;
+            opacity: 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul class="nav-li">
+                <li>
+                    <a href="../../index.html">Inicio</a>
+                </li>
+                <li>
+                    <a href="">¿Quiénes Somos?</a>
+                </li>
+                <li>
+                    <a href="">Equipo De Misión</a>
+                </li>
+                <li>
+                    <a href="">Material</a>
+                </li>
+                <li>
+                    <a href="">Blog</a>
+                </li>
+                <li>
+                    <a href="">Participa</a>
+                </li>
+                <li>
+                    <a href="">Dona</a>
+                </li>
+                <li>
+                    <a href="">Iniciar Sesion</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <section class="material-section">
+        <h1>Material</h1>
+
+        <div class="search">
+            <input type="text">
+            <button>Search</button>
+        </div>
+
+        <div class="content-card">
+
+            <div class="card">
+                <div class="card-image">
+                    <img src="https://previews.123rf.com/images/djvstock/djvstock1504/djvstock150401226/39262438-el-dise%C3%B1o-de-la-sagrada-biblia-sobre-fondo-beige-ilustraci%C3%B3n-vectorial-.jpg"
+                        alt="">
+                </div>
+                <div class="card-actions">
+                    <a href="../../static/TEST_PDF.pdf" download>
+                        <h1>Descargar cancionero</h1>
+                    </a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-image">
+                    <img src="https://picsum.photos/300/300" alt="">
+                </div>
+                <div class="card-actions">
+                    <h1>Materiales de estudio</h1>
+                </div>
+            </div>
+            <!-- .dialog-background es el fondo obscuro cuando aparece un dialog -->
+            <div class="dialog-background"></div>
+            <div class="card">
+                <div class="card-image">
+                    <img src="https://picsum.photos/301/301" alt="">
+                </div>
+                <div class="card-actions" id="devocionales" onclick="openDevocionalesModal()">
+                    <h1>DEVOCIONALES</h1>
+                </div>
+                <div id="dialog-video" on="alert('efe')">
+                    <button class="close-button" onclick="closeDevocionalesModal()">X</button>
+                    <iframe width="560vw" height="315vh" src="https://www.youtube.com/embed/7b7jNjVFqtA"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-image">
+                    <img src="https://picsum.photos/302/302" alt="">
+                </div>
+                <div class="card-actions">
+                    <h1>TALLERES</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- To-do: Crear un archivo js aparte -->
+    <script>
+        function openDevocionalesModal() {
+            document.querySelector('#dialog-video').style.display = "block"
+            document.querySelector('.dialog-background').style.display = "block"
+        }
+
+        function closeDevocionalesModal() {
+            document.querySelector('#dialog-video').style.display = "none"
+            document.querySelector('.dialog-background').style.display = "none"
+
+        }
+    </script>
+</body>
+
+</html>
