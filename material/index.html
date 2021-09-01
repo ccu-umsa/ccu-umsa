@@ -69,8 +69,6 @@
                     <h1>Materiales de estudio</h1>
                 </div>
             </div>
-            <!-- .dialog-background es el fondo obscuro cuando aparece un dialog -->
-            <div class="dialog-background"></div>
             <div class="card">
                 <div class="card-image">
                     <img src="https://picsum.photos/301/301" alt="">
@@ -79,11 +77,19 @@
                     <h1>DEVOCIONALES</h1>
                 </div>
                 <div id="dialog-video" on="alert('efe')">
-                    <button class="close-button" onclick="closeDevocionalesModal()">X</button>
-                    <iframe width="560vw" height="315vh" src="https://www.youtube.com/embed/7b7jNjVFqtA"
-                        title="YouTube video player" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe>
+                    <div class="dialog-content">
+                        <button class="close-button" onclick="closeDevocionalesModal()">&nbsp;×&nbsp;</button>
+                        <h1>Lorem ipsum dolor sit amet consectetur</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam repellendus officiis quia quas
+                            placeat nostrum eius officia omnis, rem quo quisquam nam neque, fugit, repellat ex saepe
+                            molestias modi facere!</p>
+                        <div class="video-container">
+                            <iframe width="560vw" height="315vh" src="https://www.youtube.com/embed/7b7jNjVFqtA"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="card">
