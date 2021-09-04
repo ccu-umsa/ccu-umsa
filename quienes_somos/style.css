@@ -1,0 +1,151 @@
+*{
+    margin:0px;
+    padding:10px;
+    box-sizing: border-box;
+
+} 
+
+.padre{
+    display:flex;
+    flex-flow:column nowrap;
+    background:none;
+}
+a{
+    text-decoration: none;
+}
+  .header{
+          background:url(Recursos/ccubolivia.jpg);
+          background-position: center;
+          background-attachment:contain;
+          background.size:cover;
+          height: 420px;
+
+           display:flex;
+         flex-flow:column nowrap;}
+         .header img{
+             width:100%;
+         }   
+         .menu { background rgba (0,0,0,.1);
+            display:flex;
+            flex-flow:row nowrap;
+            height: 50px;
+             align-items: center;
+             border-bottom: 1px solid rgba(255,255,255);}  
+
+            .logo{ 
+            flex:1 1 auto
+            
+            }  .logo a{
+                 color:rgb(240, 240, 240);
+                 font-size:30px;
+                 background-color:#001219;
+            }   .logo a:hover{
+                color:#adb1b4
+            }
+
+            .nav{background:#001219;
+            flex:5 1 auto;
+            height: 30px;}
+            .nav a{
+                color:#E9D8A6;
+                font-size:12px;
+                text-transform:uppercase;
+                padding:0 10px;
+                letter-spacing: 2px;
+            }  nav a:hover {
+                color:#E9D8A6;
+            }
+            .social{background:#5e6a8b;
+                height: 30px;
+                flex:1 1 auto;}
+            .texto-principal{ background: #001219;;
+                              width: 23%;
+                             height:50px;
+                             display:flex;
+                             align-items: center;}
+                             h2{
+                                 text-align:center;
+                                 flex-wrap: nowrap;
+                                 line-height:1.6;
+                                 color:#E9D8A6;
+                             }
+                             h1{
+                                 font-size:20px;
+                                 color:#E9D8A6;
+                                 font-weight:300;
+                                 text-align:center;
+                                 line-height:1.6;
+                                 font-family:helvetica;
+                                                                }
+            .texto-quienessomos {
+                background:#001219;
+            }
+                                                               
+            .section { background:none;
+          display: flex;}
+         .articulos{ 
+       background:NONE;
+          flex: 2 1 auto;
+          display:flex;
+          flex-flow:row wrap;
+         }
+        
+         .article {
+             background:#005F73;
+        flex:1 1 40%;
+         font-size:13px;
+        letter-spacing:1px;
+    margin :10px 10px 10px 10px;
+       flex: 1 1 45%;
+       background:#005F73;
+}
+        .seccion2{
+            background:NONE;
+          flex: 2 1 auto;
+          display:flex;
+          flex-flow:row wrap;
+          
+        }
+         .navegacion{background:#CA6702;
+            flex:1 1 20%;
+            display:flex;
+             flex-flow:row wrap;
+             flex:1 1 20%;
+             font-size:13px;
+            letter-spacing:1px;
+             margin :10px 10px 10px 10px;
+           flex: 3 1 20%;
+       
+            }
+             .navegacion a{
+                 text-align: center;
+                 font-family: helvetica;
+                 color:black;
+             }
+        
+    .aside{background:#e02727;
+     display:flex;
+     } 
+          .publicidad{background:#4e4e6a;}            
+  .footer{background:#000;
+display:flex;
+justify-content: center;}
+         .pie{background:rgb(250, 244, 244);
+        width:300px;
+    }
+
+@media all and (max-width: 800px){
+    .section flex-direction: column;
+}
+@media all and (max-width:800px){
+    .articles flex-direction:column;
+    
+}
+@media all and (max-width:800px){
+    .articulos flex-direction: column;
+    }
+ @media all and (max-width:800px){
+       .navegacion flex-direction: column;
+       
+}
+
